@@ -286,11 +286,11 @@ class Shortcut {
 	{
 		$body = [  
             'act' => 'GetToken',
-            'username' => 'panji123',
-            'password' => "Poltradajaya12345",
+            'username' => env('API_USERNAME'),
+            'password' => env('API_PASSWORD'),
         ];
         $api_response = Http::withOptions(['verify'=>false])
-        ->post('http://sim.poltradabali.ac.id:8100/ws/live2.php', $body);
+        ->post(env('API_ENDPOINT'), $body);
         $response=$api_response->getBody()->getContents();
         $get_contents = json_decode($response);
 		return $get_contents->data->token;

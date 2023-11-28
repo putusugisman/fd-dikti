@@ -23,7 +23,7 @@ class ProdiPtController extends Controller
             'offset' => "",
         ];
         $api_response = Http::withOptions(['verify'=>false])
-        ->post('http://sim.poltradabali.ac.id:8100/ws/live2.php', $body);
+        ->post(env('API_ENDPOINT'), $body);
         $response=$api_response->getBody()->getContents();
         $get_contents = json_decode($response);
         return response()->json($get_contents->data);

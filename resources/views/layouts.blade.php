@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8" />
         <title>{{ $title }}</title>
@@ -10,37 +9,26 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('dist') }}/img/Logo_Poltrada_header.png">
         @include('partials.style')
-
     </head>
-    
     <body data-topbar="dark">
-        <!-- Begin page -->
+        <!-- Begin layout-wrapper -->
         <div id="layout-wrapper">
-
             @include('partials.header')
             @include('partials.sidebar')
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
+            <!-- Begin main content-->
             <div class="main-content">
-
+                <!-- Begin Page-content -->
                 <div class="page-content">
                     <div class="container-fluid">
                         @yield('content')
                     </div>
-                    
                 </div>
                 <!-- End Page-content -->
-               
                 @include('partials.footer')
-                
             </div>
             <!-- end main content-->
-
         </div>
-        <!-- END layout-wrapper -->
-
+        <!-- End layout-wrapper -->
         @include('partials.script')
     </body>
 
