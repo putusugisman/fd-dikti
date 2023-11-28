@@ -13,13 +13,12 @@
 
     </head>
     
-    <body data-layout="horizontal" data-topbar="dark">
-        
+    <body data-topbar="dark">
         <!-- Begin page -->
         <div id="layout-wrapper">
 
             @include('partials.header')
-            @include('partials.header_nav')
+            @include('partials.sidebar')
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
